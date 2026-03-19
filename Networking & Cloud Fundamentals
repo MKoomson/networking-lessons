@@ -1,0 +1,129 @@
+Networking & Cloud Fundamentals 
+
+## Topics Covered
+
+* Subnetting (Practical Application)
+* Public vs Private Subnets
+* Ports & Network Security
+* HTTP vs HTTPS
+* Encryption Basics (SSL/TLS)
+* Load Balancers & Traffic Distribution
+* Basic Cloud Architecture Design
+
+---
+
+## Key Concepts Learned
+
+### Subnetting (Applied)
+
+* Dividing a network into smaller segments for better organization and security.
+* Example:
+
+  * Network: 10.0.0.144/28
+  * Usable IPs: 10.0.0.145 – 10.0.0.158
+  * Broadcast: 10.0.0.159
+
+---
+
+### Public vs Private Subnets
+
+| Type           | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| Public Subnet  | Accessible from the internet (e.g., Load Balancer)    |
+| Private Subnet | Not directly accessible (e.g., Web Servers, Database) |
+
+---
+
+### Ports & Their Uses
+
+| Port | Service | Usage                                         |
+| ---- | ------- | --------------------------------------------- |
+| 80   | HTTP    | Web traffic (not secure)                      |
+| 443  | HTTPS   | Secure web traffic                            |
+| 3306 | MySQL   | Database communication (should NOT be public) |
+
+---
+
+### HTTP vs HTTPS
+
+* **HTTP**
+
+  * Data is not encrypted
+  * Vulnerable to interception and tampering
+
+* **HTTPS**
+
+  * Data is encrypted
+  * Uses SSL/TLS for secure communication
+
+---
+
+### Why HTTPS is Secure
+
+* Uses encryption keys (public + private)
+* Browser and server establish a shared secret
+* Data becomes unreadable if intercepted
+
+---
+
+### Load Balancer
+
+#### What it does:
+
+* Distributes traffic across multiple servers
+* Prevents overload
+* Improves performance and availability
+
+#### Benefits:
+
+* Scalability (handle more users)
+* High availability (no single point of failure)
+
+---
+
+## Basic Cloud Architecture (Secure Design)
+
+Internet
+↓
+Load Balancer (Public Subnet, HTTPS)
+↓
+Web Servers (Private Subnet)
+↓
+Database (Private Subnet)
+
+---
+
+## Security Best Practices Learned
+
+* Never expose databases to the internet
+* Use HTTPS instead of HTTP
+* Restrict access using ports and firewall rules
+* Keep core infrastructure in private subnets
+
+---
+
+## Key Takeaways
+
+* Security is about **limiting exposure**
+* Encryption protects data **in transit**
+* Load balancing ensures **performance and reliability**
+* Real-world systems use **layered architecture**
+
+---
+
+## Next Steps
+
+* Understand how private servers access the internet (NAT Gateway)
+* Learn AWS equivalents:
+
+  * EC2 (Web Servers)
+  * ELB (Load Balancer)
+  * RDS (Database)
+  * Security Groups
+* Build a real cloud architecture project
+* Start preparing GitHub + LinkedIn portfolio
+
+
+I now understand how secure architectures are designed using subnets, load balancers, and encryption.
+
+---
